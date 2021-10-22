@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import Box from '@mui/material/Box';
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 100 },
@@ -81,19 +82,19 @@ const rows = [
 
 export default function Vinilos() {
   return (
-
-    <Grid container justifyContent="center">
-      <div style={{ height: 400, width: '85%', display: 'flex'}}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5]}
-          checkboxSelection
-          disableSelectionOnClick
-        />
-      </div>
-    </Grid>
-
+    <Box sx= {{marginTop: '20px'}}>
+      <Grid container justifyContent="center">
+        <div style={{ height: 400, width: '85%', display: 'flex'}}>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            pageSize={5}
+            rowsPerPageOptions={[5]}
+            checkboxSelection
+            disableSelectionOnClick
+          />
+        </div>
+      </Grid>
+    </Box>
   );
 }
